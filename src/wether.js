@@ -36,17 +36,17 @@ function Wether() {
     }
 
     const search = async (e) => {
-        if (e.code === "Enter") {
+        // if (e.code === "Enter") {
             let data = await Fetchdata(query)
             setWether(data)
-        }
+        // }
     }
 
     return (
         <div style={container}>
             <div style={box} >
                 <div style={{ textAlign: "center" }}>
-                    <input value={query} onChange={change} type="text" placeholder="Enter City Name" onKeyPress={search} style={{ padding: "10px", width: "300px", borderRadius: "7px", marginTop: "15px" }} />
+                    <input value={query} onChange={change} type="text" placeholder="Enter City Name" style={{ padding: "10px", width: "300px", borderRadius: "7px", marginTop: "15px" }}/> <i className="fa-brands fa-searchengin fa-2xl" onClick={search} style={{color: "#000000"}}></i>
                 </div><br />
 
                 {weather &&
